@@ -5,6 +5,18 @@
   font-family: 'Martel Sans', sans-serif, 'Port Lligat Sans', sans-serif;
 }
 
+/* CUSTOM CURSOR */
+
+.cursor{
+  position: absolute;
+
+  border: 1px solid white;
+  border-radius: 50%;
+
+  height: 20px;
+  width: 20px;
+}
+
 /* HEADING CONTAINER */
 
 .container{
@@ -12,7 +24,7 @@
 
   height: 500px;
 
-  background-image: linear-gradient(#F94A29, #FF0303);
+  background-image: linear-gradient(#FF6000,#FFD93D, #FFD966);
 
   display: flex;
   
@@ -22,13 +34,13 @@
 
 .container p{
   position: relative;
-  z-index: 2;
+  z-index: 3;
   cursor: pointer;
 
   font-weight: 900;
   font-size: 100px;
   
-  background-image: linear-gradient(#146C94, #79E0EE);
+  background-image: linear-gradient(#146C94, #79E0EE, #ECF8F9);
   -webkit-background-clip: text;
   background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -46,8 +58,8 @@
 
   display: flex;
   position: absolute;
-  z-index: 0;
-  justify-content: space-between;
+  z-index: 2;
+  justify-content: space-around;
   align-items: last baseline;
 
   transform: translateY(240px);
@@ -58,7 +70,6 @@
   width: 50px;
 
   border-radius: 100%;
-  box-shadow: 1px 10px 50px 0;
 
   background-image: linear-gradient(#068DA9 , #ECF8F9);
 }
@@ -97,7 +108,7 @@
 /* LOADING BUBBLES */
 
 .sea-box{
-  height: 100px;
+  height: 500px;
 
   position: relative;
   z-index: 1;
@@ -107,7 +118,6 @@
   justify-content: center;
 
   box-sizing: border-box;
-  box-shadow: 1px 10px 50px 0;
   border-radius: 0 0 20px 20px;
 
   background-image: linear-gradient(#ECF8F9 , #068DA9);
@@ -123,6 +133,8 @@
     background-image: linear-gradient(#0A4D68, #79E0EE);
   }
 }
+
+
 
 @keyframes slideInLeft {
   0%{
@@ -141,13 +153,15 @@
 @keyframes evaporate{
   0%{
     transform: translate(0 , 0);
+    box-shadow: none;
   }
 
   10%{
-    transform: translate(0 , -50px);
+    transform: translate(0 , -30px);
   }
   20%{
-    transform: translate(8px , -130px);
+    transform: translate(8px , -100px);
+    box-shadow: 0 0 10px 0;
   }
   30%{
     transform: translate(-8px , -190px);
@@ -169,6 +183,7 @@
   }
   90%{
     transform: translate(-2px, -500px);
+    box-shadow: 0 0 10px 0;
   }
 
   100%{
